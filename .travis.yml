@@ -11,5 +11,5 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: 0c9db88e-02fc-4728-a4bc-d61ed3224357
+    secure: "0c9db88e-02fc-4728-a4bc-d61ed3224357"
   app: numberguessgame
