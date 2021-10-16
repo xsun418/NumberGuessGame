@@ -1,10 +1,16 @@
 language: java
 jdk:
-- openjdk16
+  - openjdk16
+
+services:
+  - docker
+
 script:
-- java --version
-- "./mvnw clean install"
-- "./mvnw test"
+  - "./mvnw clean package"
+  - "docker build -t xsun0418/number-guess-game ."
+  - "docker login -u xsun0418 -p wanxi1818"
+  - "docker push xsun0418/number-guess-game:latest"
+
 deploy:
   provider: heroku
   api_key:
