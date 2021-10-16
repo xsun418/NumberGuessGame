@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Number Guess game</title>
@@ -8,8 +8,7 @@
     <div align="center">
         <h1>Welcome to Number Guess Game</h1>
         <h3>
-            <a th:th:href=
-               th:text="Play">Click to Play</a>
+            <a th:href="@{/setBound?lowerbound=1&upperBound=10}" target="_self">Play</a><br/>
         </h3>
     </div>
 </body>
